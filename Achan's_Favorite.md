@@ -8,4 +8,4 @@
 
 4. The name of the person in the meme was the flag
 
-Flag-wired{.....}
+Flag-wired{...}
