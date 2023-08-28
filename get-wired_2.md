@@ -2,4 +2,4 @@
 
 1. This flag is given in the DISCORD app by the mentors
 
-Flag
+Flag - wired{...}
