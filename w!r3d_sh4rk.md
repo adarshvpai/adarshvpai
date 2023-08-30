@@ -1,4 +1,4 @@
-## w!r3d_sh4rk - [ONLINE WIRELESS]
+## w!r3d_sh4rk - [WIRELESS]
 
 1. Dowloaded the .pcapng file from the attachment.
 
