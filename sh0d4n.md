@@ -1,4 +1,4 @@
-## sh0d4n - [ONLINE ICS]
+## sh0d4n - [ICS]
 
 1. Searched what is Shodan on Google.
 
