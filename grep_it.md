@@ -1,4 +1,4 @@
-## grep_it - [ONLINE REVERSING]
+## grep_it - [REVERSING]
 
 1. Downloaded the .text file from the attachment.
 
