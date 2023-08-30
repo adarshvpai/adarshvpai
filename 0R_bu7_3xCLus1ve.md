@@ -6,6 +6,6 @@
 
 3. Wrote the decryption program using ChatGPT.
 
-4. The encrypted flag in the .py file is decrypted using the decryption program.
+4. The encrypted flag given in the .py file is decrypted using the decryption program.
 
 Flag - wired{...}
