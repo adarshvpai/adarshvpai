@@ -1,4 +1,4 @@
-## Achan's Favorite - [ONLINE MISCELLANEOUS]
+## Achan's Favorite - [MISC]
 
 1. Downloaded the .wav file from the attachments
 
