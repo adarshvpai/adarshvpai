@@ -1,4 +1,4 @@
-## PCB_reversing - [OFFLINE HARDWARE]
+## PCB_reversing - [EMBEDDED]
 
 1. Downloaded the .zip file from the attachments.
 
