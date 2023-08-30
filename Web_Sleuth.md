@@ -1,4 +1,4 @@
-## Web Sleuth! - [ONLINE MISCELLANEOUS]
+## Web Sleuth! - [MISC]
 
 1. Searched Esteban Lavos on GitHub and viewed the profile.
 
