@@ -1,4 +1,4 @@
-## 0R_bu7_3xCLus1ve - [ONLINE REVERSING]
+## 0R_bu7_3xCLus1ve - [REVERSING]
 
 1. Downloaded the .py file from the attachment.
 
