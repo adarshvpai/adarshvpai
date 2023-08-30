@@ -1,4 +1,4 @@
-## extraCt - [OFFLINE HARDWARE]
+## extraCt - [EMBEDDED]
 
 1. Opened the Arduino IDE on the system.
 
