@@ -1,4 +1,4 @@
-## Crypto Layers - [ONLINE CRYPTO]
+## Crypto Layers - [CRYPTO]
 
 1. Decrypted the binary encrypted message given in description of the challenge to text.
 
