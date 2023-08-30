@@ -1,4 +1,4 @@
-## da_french_cipher - [ONLINE CRYPTO]
+## da_french_cipher - [CRYPTO]
 
 1. Analyzed the encrypted flag from the description using Online Cipher Analyzer.
 
