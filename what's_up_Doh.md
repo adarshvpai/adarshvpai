@@ -1,4 +1,4 @@
-## what's_up_Doh - [ONLINE WIRELESS]
+## what's_up_Doh - [WIRELESS]
 
 1. Downloaded the .pcap file from the attachment.
 
