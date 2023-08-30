@@ -1,6 +1,6 @@
 ## Crypto Layers - [ONLINE CRYPTO]
 
-1. Decrypted the binary encrypted message given in descryption of the challenge to text.
+1. Decrypted the binary encrypted message given in description of the challenge to text.
 
 2. Decrypted the text message to Caesar Script(5) using online Caesar Cipher Decoder.
 
