@@ -1,4 +1,4 @@
-## MICH43L5_P4R4DIS3-[ONLINE MISCELLANEOUS]
+## MICH43L5_P4R4DIS3-[MISC]
 
 1. Downloaded the .png file from thw attachments.
 
