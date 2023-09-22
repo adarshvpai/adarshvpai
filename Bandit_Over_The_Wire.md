@@ -155,15 +155,127 @@
 
 1. Logged in to the Bandit12 server using the command 'ssh bandit12@bandit.labs.overthewire.org -p 2220' using the password 'JVNBBFSmZwKKOP0XbFXOoW8chDz5yVRv' given in the previous level.
 
-wbWdlBxEir4CaE8LaPhauuOo6pwRmrDw
+2. Made a temp folder and made a copy of the data.txt and renamed to hexdump_data
+
+3. Reverted the hexdump and get the actual data by using the command 'xxd -r hexdump_data compressed_data'.
+
+4. Tried to fnd the type of decompression by looking at the first bytes in the hexdump to find the file signature.
+
+5. Added the correct file ending, by renaming the file and decompress the file with gzip -d.
+
+6. The data was still not fully decompressed so checked the the first bytes again.
+
+7. Renamed the file with the appropriate file ending (.bz2) and decompressed it with bzip2 -d.
+
+8. The file was still compressed. xxd shows that it is ‘gzip’ compressed again. So repeated the previous steps, renaming and decompressing.
+
+9. Used the command 'xxd compressed_data | head ', it displayed ‘data5.bin’ string, which is a filename.
+
+10. Used 'mv compressed_data compressed_data.tar' and 'tar -xf compressed_data.tar ' to extract the file.
+
+11. ‘data5.bin’ seems to be another archive with a file called ‘data6.bin’. So extracted the file again using the command 'tar -xf data5.bin'.
+
+12. The file ‘data6.bin’ seems to be bzip2 compressed again.
+
+13. ‘data6.bin.out’ shows another file name ‘data8.bin’ again. So extracted this file.
+
+14. Finally, done one more decompression with gzip and gotten a readable file with the password.
+
+15. The password 'wbWdlBxEir4CaE8LaPhauuOo6pwRmrDw' was displayed.
+    
 ## Level 13 -> 14
+
+1. Logged in to the Bandit13 server using the command 'ssh bandit13@bandit.labs.overthewire.org -p 2220' using the password 'wbWdlBxEir4CaE8LaPhauuOo6pwRmrDw' given in the previous level.
+
+2. it was given that the password for the next level is stored in /etc/bandit_pass/bandit14 and can only be read by user bandit14. For this level, you don’t get the next password, but you get a private SSH key that can be used to log into the next level. Note: localhost is a hostname that refers to the machine you are working on.
+
+3. Logged into the Bandit14 server from Bandit13 server the command 'ssh -i sshkey.private bandit14@bandit.labs.overthewire.org -p 2220'.
+
+4. Displayed the content of the /etc/bandit_pass/bandit14 using the command 'cat /etc/bandit_pass/bandit14'.
+
+5. The password 'fGrHPx402xGC7U7rXKDaxiWFTOiF0ENq' was displayed.
+ 
 ## Level 14 -> 15
+
+1. Logged in to the Bandit14 server using the command 'ssh bandit14@bandit.labs.overthewire.org -p 2220' using the password 'fGrHPx402xGC7U7rXKDaxiWFTOiF0ENq' given in the previous level.
+
+2. It was given that the password for the next level can be retrieved by submitting the password of the current level to port 30001 on localhost using SSL encryption.
+
+3. Runned the command 'nc localhost 30000' and submitted the current level password.
+
+4. The password 'jN2kgmIXJ6fShzhT2avhotn4Zcka6tnt' was displayed.
+   
 ## Level 15 -> 16
-## Level - 17
-## Level - 18
-## Level - 19
-## Level - 20
-## Level - 21
+
+1. Logged in to the Bandit15 server using the command 'ssh bandit15@bandit.labs.overthewire.org -p 2220' using the password 'jN2kgmIXJ6fShzhT2avhotn4Zcka6tnt' given in the previous level.
+
+2. It was given that the password for the next level can be retrieved by submitting the password of the current level to port 30001 on localhost using SSL encryption.
+
+3. Runned the command 'openssl s_client -connect localhost:30001' and entered the current level password.
+
+4. The password 'JQttfApK4SeyHwDlI9SXGR50qclOAil1' was displayed.
+
+## Level 16 -> 17
+
+1. Logged in to the Bandit16 server using the command 'ssh bandit16@bandit.labs.overthewire.org -p 2220' using the password 'JQttfApK4SeyHwDlI9SXGR50qclOAil1' given in the previous level.
+
+2. It was given that the credentials for the next level can be retrieved by submitting the password of the current level to a port on localhost in the range 31000 to 32000. First find out which of these ports have a server listening on them. Then find out which of those speak SSL and which don’t. There is only 1 server that will give the next credentials, the others will simply send back to you whatever you send to it.
+
+3. Checked the services provided by each por tusing the command 'nmap -sV localhost -p 31000-32000'.
+
+4. Out of the 5 ports displayed port 31790 looked promissing.
+
+5. So runned the command 'openssl s_client -connect localhost:31790' and entered the current level password.
+
+6. It a displayed a private SSH key which was save dt a temp file and used to login to Bandit17 server using the command 'ssh -i sshkey17.private bandit17@bandit.labs.overthewire.org -p 2220'.
+
+7. Displayed the content of the /etc/bandit_pass/bandit17 using the command 'cat /etc/bandit_pass/bandit17'.
+
+8. The password 'VwOSWtCA7lRKkTfbr2IDh6awj9RNZM5e' was displayed.
+
+## Level 17 -> 18
+
+1. Logged in to the Bandit17 server using the command 'ssh bandit17@bandit.labs.overthewire.org -p 2220' using the password 'VwOSWtCA7lRKkTfbr2IDh6awj9RNZM5e' given in the previous level.
+
+2. It was given that there are 2 files in the homedirectory: passwords.old and passwords.new. The password for the next level is in passwords.new and is the only line that has been changed between passwords.old and passwords.new.
+
+3. Used 'diff passwords.old passwords.new' command to find the difference between the files.
+
+4. The password 'hga5tuuCLF6fFzUpnagiMN8ssu9LFrdg' was displayed.
+
+## Level 18 -> 19
+
+1. Logged in to the Bandit18 server using the command 'ssh bandit18@bandit.labs.overthewire.org -p 2220' using the password 'hga5tuuCLF6fFzUpnagiMN8ssu9LFrdg' given in the previous level.
+
+2. But simultaneously it was logged out.
+
+3. It was given that  if you have solved this level and see ‘Byebye!’ when trying to log into bandit18, this is related to the next level, bandit19 and the password for the next level is stored in a file readme in the homedirectory. Unfortunately, someone has modified .bashrc to log you out when you log in with SSH.
+
+4. So runned the command 'ssh bandit18@bandit.labs.overthewire.org -p 2220 ls' to find the files in the server.
+
+5. Runned the command 'ssh bandit18@bandit.labs.overthewire.org -p 2220 cat readme' to display the content of the file.
+
+6. The password 'awhqfNnAbc1naukrpqDYcF95h7HoMTrC' was displayed.
+   
+## Level 19 -> 20
+
+1. Logged in to the Bandit19 server using the command 'ssh bandit19@bandit.labs.overthewire.org -p 2220' using the password 'awhqfNnAbc1naukrpqDYcF95h7HoMTrC' given in the previous level.
+
+2. It was given that to gain access to the next level, you should use the setuid binary in the homedirectory. Execute it without arguments to find out how to use it. The password for this level can be found in the usual place (/etc/bandit_pass), after you have used the setuid binary.
+
+3. Checked who was the owner of the setuid binary by using the command 'ls -la'.
+
+4. After executing the binary file using the command '/bandit20-do cat /etc/bandit_pass/bandit20' the password was displayed.
+
+5. The password 'VxCazJaVykI6W36BkBU0mJTCM8rR95XT' was displayed.
+
+## Level 20 -> 21
+
+1. Logged in to the Bandit19 server using the command 'ssh bandit19@bandit.labs.overthewire.org -p 2220' using the password 'VxCazJaVykI6W36BkBU0mJTCM8rR95XT' given in the previous level.
+
+2. It was given that there is a setuid binary in the homedirectory that does the following: it makes a connection to localhost on the port you specify as a commandline argument. It then reads a line of text from the connection and compares it to the password in the previous level (bandit20). If the password is correct, it will transmit the password for the next level (bandit21).
+
+3. 
 ## Level - 22
 ## Level - 23
 ## Level - 24
