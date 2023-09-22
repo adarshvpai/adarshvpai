@@ -271,15 +271,90 @@
 
 ## Level 20 -> 21
 
-1. Logged in to the Bandit19 server using the command 'ssh bandit19@bandit.labs.overthewire.org -p 2220' using the password 'VxCazJaVykI6W36BkBU0mJTCM8rR95XT' given in the previous level.
+1. Logged in to the Bandit20 server using the command 'ssh bandit20@bandit.labs.overthewire.org -p 2220' using the password 'VxCazJaVykI6W36BkBU0mJTCM8rR95XT' given in the previous level.
 
 2. It was given that there is a setuid binary in the homedirectory that does the following: it makes a connection to localhost on the port you specify as a commandline argument. It then reads a line of text from the connection and compares it to the password in the previous level (bandit20). If the password is correct, it will transmit the password for the next level (bandit21).
 
+3. Create a connection in server mode by using the command 'echo -n 'VxCazJaVykI6W36BkBU0mJTCM8rR95XT' | nc -l -p 1234 &
+[1] 24661'.
+
+4. Executed the command './suconnect 1234'
+
+5. The password 'NvEJF7oVjkddltPSrdKEFOllh9V1IBcq' was displayed.
+   
+## Level 21 -> 22
+
+1. Logged in to the Bandit21 server using the command 'ssh bandit21@bandit.labs.overthewire.org -p 2220' using the password 'NvEJF7oVjkddltPSrdKEFOllh9V1IBcq' given in the previous level.
+
+2. It was given that a program is running automatically at regular intervals from cron, the time-based job scheduler. Look in /etc/cron.d/ for the configuration and see what command is being executed.
+
+3. Looked at what was in the ‘/etc/cron.d’ folder by using the command 'ls -la /etc/cron.d'.
+
+4. Opened the /etc/cron.d/cronjob_bandit22 file using the command 'cat /etc/cron.d/cronjob_bandit22'.
+
+5. Opened the /usr/bin/cronjob_bandit22.sh file using the command 'cat /usr/bin/cronjob_bandit22.sh'.
+
+6. Opened the /tmp/t7O6lds9S0RqQh9aMcz6ShpAoZKF7fgv file using the command 'cat  /tmp/t7O6lds9S0RqQh9aMcz6ShpAoZKF7fgv'.
+
+7. The password 'WdDozAdTM2z9DiFEQ2mGlwngMfj4EZff' was displayed.
+
+## Level 22 -> 23
+
+1. Logged in to the Bandit22 server using the command 'ssh bandit23@bandit.labs.overthewire.org -p 2220' using the password 'WdDozAdTM2z9DiFEQ2mGlwngMfj4EZff' given in the previous level.
+
+2. It was given that a program is running automatically at regular intervals from cron, the time-based job scheduler. Look in /etc/cron.d/ for the configuration and see what command is being executed.
+
+3. Looked at what was in the ‘/etc/cron.d’ folder by using the command 'ls -la /etc/cron.d'.
+
+4. Opened the /etc/cron.d/cronjob_bandit23 file using the command 'cat /etc/cron.d/cronjob_bandit23'.
+
+5. Opened the /usr/bin/cronjob_bandit23.sh file using the command 'cat /usr/bin/cronjob_bandit23.sh'.
+
+6. Runned the command 'echo I am user bandit23 | md5sum | cut -d ' ' -f 1' and the name of the tmp file was displayed
+
+7. Opened the tmp file using the command 'cat /tmp/8ca319486bfbbc3663ea0fbe81326349'.
+
+8. The password 'QYw0Y2aiA672PsMmh9puTQuhoz8SyR2G' was displayed.
+   
+## Level 23 -> 24
+
+1. Logged in to the Bandit23 server using the command 'ssh bandit123@bandit.labs.overthewire.org -p 2220' using the password 'QYw0Y2aiA672PsMmh9puTQuhoz8SyR2G' given in the previous level.
+
+2. It was given that a program is running automatically at regular intervals from cron, the time-based job scheduler. Look in /etc/cron.d/ for the configuration and see what command is being executed.
+
+3. Looked at what was in the ‘/etc/cron.d’ folder by using the command 'ls -la /etc/cron.d'.
+
+4. Opened the /etc/cron.d/cronjob_bandit24 file using the command 'cat /etc/cron.d/cronjob_bandit24'.
+
+5. Opened the /usr/bin/cronjob_bandit24.sh file using the command 'cat /usr/bin/cronjob_bandit24.sh'.
+
+6. Made a tmp file using the command 'mkdir /tmp/rand'.
+
+7. Created a shell script file using the command 'nano bandit24_pass.sh'.
+
+8. Written the Shell Script file with content:
+   '#!/bin/bash
+    cat /etc/bandit_pass/bandit24 > /tmp/rand/password'
+
+9. Given the necessary permissions to the Shell file.
+   
+10. Created a file using the command 'touch password'.
+
+11. Given the permissions for the password file.
+
+12. Executed the Shell file using the command 'cp bandit24_pass.sh /var/spool/bandit24/foo/bandit24_pass.sh'.
+
+13. Displayed the content of the password file using the command 'cat password'.
+
+14. The password 'VAfGXJ1PBSsPSnvsjI8p759leLZ9GGar' was displayed.
+    
+## Level 24 -> 25
+
+1. Logged in to the Bandit23 server using the command 'ssh bandit123@bandit.labs.overthewire.org -p 2220' using the password 'VAfGXJ1PBSsPSnvsjI8p759leLZ9GGar' given in the previous level.
+
+2. It was given that a daemon is listening on port 30002 and will give you the password for bandit25 if given the password for bandit24 and a secret numeric 4-digit pincode. There is no way to retrieve the pincode except by going through all of the 10000 combinations, called brute-forcing.
+
 3. 
-## Level - 22
-## Level - 23
-## Level - 24
-## Level - 25
 ## Level - 26
 ## Level - 27
 ## Level - 28
