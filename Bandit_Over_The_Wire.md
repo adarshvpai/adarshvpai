@@ -175,7 +175,7 @@
 
 11. ‘data5.bin’ seems to be another archive with a file called ‘data6.bin’. So extracted the file again using the command 'tar -xf data5.bin'.
 
-12. The file ‘data6.bin’ seems to be bzip2 compressed again.
+12. The file ‘data6.bin’ seems to be bzip2 compressed again.710
 
 13. ‘data6.bin.out’ shows another file name ‘data8.bin’ again. So extracted this file.
 
@@ -350,13 +350,133 @@
     
 ## Level 24 -> 25
 
-1. Logged in to the Bandit23 server using the command 'ssh bandit123@bandit.labs.overthewire.org -p 2220' using the password 'VAfGXJ1PBSsPSnvsjI8p759leLZ9GGar' given in the previous level.
+1. Logged in to the Bandit24 server using the command 'ssh bandit124@bandit.labs.overthewire.org -p 2220' using the password 'VAfGXJ1PBSsPSnvsjI8p759leLZ9GGar' given in the previous level.
 
 2. It was given that a daemon is listening on port 30002 and will give you the password for bandit25 if given the password for bandit24 and a secret numeric 4-digit pincode. There is no way to retrieve the pincode except by going through all of the 10000 combinations, called brute-forcing.
 
-3. 
-## Level - 26
-## Level - 27
-## Level - 28
-## Level - 29
-## Level - 30
+3. Made a tmp file and wrote a script file for getting all possible valuez (0000-9999)
+
+4. The password along with the poassible values was stored in the pass.txt file.
+
+5. By the command 'cat pass.txt | nc localhost 30006', the correct pincode was enterd.
+
+6. The password 'p7TaowMYrmu23Ol8hiZh9UvD0O9hpx8d' was displayed.
+   
+## Level 25 -> 26
+
+1. Logged in to the Bandit25 server using the command 'ssh bandit125@bandit.labs.overthewire.org -p 2220' using the password 'p7TaowMYrmu23Ol8hiZh9UvD0O9hpx8d' given in the previous level.
+
+2. It was given that logging in to bandit26 from bandit25 should be fairly easy… The shell for user bandit26 is not /bin/bash, but something else. Find out what it is, how it works and how to break out of it.
+
+3. Used the command 'ls' to find what files was there.
+
+4. Tried to log in to Bandit26 using the command 'ssh -i bandit26.sshkey bandit26@localhost -p 2220'
+
+5. But it was simulatneously logged out.
+y using the comman
+6. A hint was given in the /usr/bin/showtext about more ~/text.txt.
+
+7. So entered the command 'ssh -i bandit26.sshkey bandit26@localhost -p 2220' and reduced the size of the terminal tab to activate the more program.
+
+8. Entered 'V' to start up an editor in the current line.
+
+9. Tried to execute the shell by using the command ':shell'
+
+10. Nothing happened.So changed the shell to /bin/bash by using the command ':set shell=/bin/bash'.
+
+11. Executed the shell again by the command ':shell'
+
+12. Now it was logged in to the Bandit26 sever.
+
+13. Used the command 'cat /etc/bandit_pass/bandit26' to get the password.
+   
+14. The password 'c7GvcKlw9mC7aUQaPx7nwFstuAIBw1o1' was displayed.
+    
+## Level 26 -> 27
+
+1. Logged in to the Bandit26 server using the command 'ssh bandit126@bandit.labs.overthewire.org -p 2220' using the password 'c7GvcKlw9mC7aUQaPx7nwFstuAIBw1o1' given in the previous level.
+
+2. It was given that 'Good job getting a shell! Now hurry and grab the password for bandit27!'
+
+3. Used 'ls' command to find out what all files was there in the server.
+
+4. Used the command './bandit27-do cat /etc/bandit\_pass/bandit27' to get the password.
+
+5. The password 'YnQpBuifNMas1hcUFk70ZmqkhUU2EuaS' was displayed.
+   
+## Level 27 -> 28
+
+1. Logged in to the Bandit27 server using the command 'ssh bandit127@bandit.labs.overthewire.org -p 2220' using the password 'YnQpBuifNMas1hcUFk70ZmqkhUU2EuaS' given in the previous level.
+
+2. It was given that there is a git repository at ssh://bandit27-git@localhost/home/bandit27-git/repo via the port 2220. The password for the user bandit27-git is the same as for the user bandit27.Clone the repository and find the password for the next level.
+
+3. Clonned the Git repo by the command 'git clone ssh://bandit27-git@localhost:2220/home/bandit27-git/repo'.
+
+4. Opened the repo directory by the command 'cd repo'.
+
+5. Use 'ls' to find the  files in the repo directory.
+
+6. Displayed the content of the README file by using the command 'cat README'
+
+7. The password 'AVanL161y9rsbcJIsFHuw35rjaOM19nR' was displayed.
+   
+
+## Level 28 -> 29
+
+1. Logged in to the Bandit28 server using the command 'ssh bandit128@bandit.labs.overthewire.org -p 2220' using the password 'AVanL161y9rsbcJIsFHuw35rjaOM19nR' given in the previous level.
+
+2. It was given that There is a git repository at ssh://bandit28-git@localhost/home/bandit28-git/repo via the port 2220. The password for the user bandit28-git is the same as for the user bandit28.Clone the repository and find the password for the next level.
+
+3. Clonned the Git repo by the command 'git clone ssh://bandit28-git@localhost:2220/home/bandit28-git/repo'.
+
+4. Opened the repo directory by the command 'cd repo'.
+
+5. Use 'ls' to find the  files in the repo directory.
+
+6. Displayed the content of the README file by using the command 'cat README'.
+
+7. But the password was encrypted.
+
+8. Used the command 'git log'.
+
+9. Used the command 'git checkout c0a8c3cf093fba65f4ee0e1fe2a530b799508c78' to decrypt the README.md .
+
+10. Displayed the content of the README file by using the command 'cat README'.
+
+11. It was still encrypted.
+
+12. Used the command 'git checkout abcff758fa6343a0d002a1c0add1ad8c71b88534' to decrypt the README.md .
+
+13. Displayed the content of the README file by using the command 'cat README'.
+
+14. The password 'tQKvmcwNYcFS6vmPHIUSI3ShmsrQZK8S' was displayed.
+
+## Level 29 -> 30
+
+1. Logged in to the Bandit29 server using the command 'ssh bandit129@bandit.labs.overthewire.org -p 2220' using the password 'tQKvmcwNYcFS6vmPHIUSI3ShmsrQZK8S' given in the previous level.
+
+2. It was given that there is a git repository at ssh://bandit29-git@localhost/home/bandit29-git/repo via the port 2220. The password for the user bandit29-git is the same as for the user bandit29. Clone the repository and find the password for the next level.
+
+3. Clonned the Git repo by the command 'git clone ssh://bandit29-git@localhost:2220/home/bandit29-git/repo'.
+
+4. Opened the repo directory by the command 'cd repo'.
+
+5. Use 'ls' to find the  files in the repo directory.
+
+6. Displayed the content of the README file by using the command 'cat README'.
+
+7. But the password was encrypted.
+
+8. Used the command 'git log'.
+
+9. Used the command 'git checkout 1a57cf10158f133c4f40ff82251f605a7618631d' to decrypt the README.md .
+
+10. Used the command 'git branch' th find the branch.
+
+11. Used the command 'git branch -a' to find whart all branches are there.
+
+12. Used the command 'git checkout dev' to change the branch to 'dev'.
+
+13. Displayed the content of the README file by using the command 'cat README'.
+
+14. The password 'xbhV3HpNGlTIdnjUrdAlPzc2L6y9EOnS' was displayed.
