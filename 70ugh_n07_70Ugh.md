@@ -8,7 +8,7 @@
 
 4. The given Arduino board after the specified connections made was connected to the system.
 
-5. The Arduino IDE Software was opened choosed the Board.
+5. The Arduino IDE Software was opened choosed the Board and set the necessary baud rate.
 
 6. The flag was displayed in the Serial Monitor.
 
