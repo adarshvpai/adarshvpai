@@ -6,7 +6,7 @@
 
 3. By analyzing that code connections from Pin 2, Pin 4 were connected to 5V and Pin 3,Pin 5 were connected to GND
 
-4. The given Arduino board after the specified connections made was connected top system
+4. The given Arduino board after the specified connections made was connected to the system.
 
 5. The Arduino IDE Software was opened choosed the Board.
 
