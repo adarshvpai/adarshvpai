@@ -1,6 +1,6 @@
 ## MICH43L5_P4R4DIS3-[MISC]
 
-1. Downloaded the .png file from thw attachments.
+1. Downloaded the .png file from the attachments.
 
 2. Analyzed the image using Google Lens.
 
