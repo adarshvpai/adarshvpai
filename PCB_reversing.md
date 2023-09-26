@@ -10,6 +10,6 @@
 
 5. Submitted the circuit on the google form for the auhtor of the challenge to examine it.
 
-6. After examination, the flag was given by the mentor from the lab
+6. After examination, the flag was given by the mentor from the lab.
 
 Flag - wired{...}
