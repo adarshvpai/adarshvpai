@@ -10,6 +10,6 @@
 
 5. In Instagram it was found the she was in Italy.
 
-6. In the challenge desription it was said that the country name is the flag.
+6. In the challenge description it was said that the country name is the flag.
 
 Flag - wired{...}
