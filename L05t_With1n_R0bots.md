@@ -6,7 +6,7 @@
 
 3. The gateway of the Wi-Fi is searched on Google.
 
-4. A hint was given in the webpage regading robots.
+4. A hint was given in the webpage regarding robots.
 
 5. Searched what is robots related with webpages on Google.
 
